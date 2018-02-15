@@ -1,0 +1,106 @@
+@import "smart-grid"
+
+$name_color: #00aeef
+$contact_bg_to_left: linear-gradient(to left, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
+$contact_bg_to_right: linear-gradient(to right, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
+$contact_email_bg: #0099ff
+
++reset()
+
+.debug
+	position: absolute
+	z-index: -3
+	+debug(rgba(0, 0, 0, .3), 1px solid green)
+
+body
+	font-family: "Open Sans"
+	font-size: 0.9rem
+	text-align: justify
+h2
+	font-family: "Century Gothic"
+	text-transform: uppercase
+
+h3
+	font-family: "Open Sans"
+	text-transform: uppercase
+
+a:link, a:visited
+	text-decoration: none
+	color: inherit
+	display: block
+
+.wrapper
+	+wrapper()
+	border: 1px dotted 
+	padding-top: 10px
+
+//container of site
+.content
+	+row-flex()
+	justify-content: center
+	position: relative
+
+//left sidebar
+.left 
+	background-color: #d9d9d9
+	+col()
+	+size(4)
+	+size-xs(8)
+	+xs-block()
+
+	.personal-photo
+		max-width: 350px
+
+	.contacts
+		ul
+			li 
+				a
+					padding: 10px
+					color: #fff
+					transition: transform .2s
+					border-top: 1px solid #00d9ff
+					background-image: $contact_bg_to_right
+					display: flex
+					flex-wrap: wrap
+					align-items: flex-start
+					&:hover
+						transform: scale(1.05)
+					svg
+						font-size: 1.2rem
+						padding-right: 10px
+
+			li:first-child a svg, li:nth-child(4) a svg
+				padding-left: 4px
+//main content		
+.right
+	+col()
+	+size(8)
+	+size-xs(12)
+	+size-xxs(12)
+	border: 1px solid blue
+
+	.general-info
+		
+
+		.lang
+			position: absolute
+			top: 0
+			right: 0
+
+			img
+				cursor: pointer
+
+			img:nth-child(2)
+				padding: 0 5px
+
+	.general-info-content
+		h2
+			font-weight: bold
+			color: $name_color
+			font-size: 2.2rem
+			letter-spacing: 3px
+			padding-top: 40px
+		h3
+			font-size: 1.2rem
+			font-weight: bold
+			padding: 5px 0 

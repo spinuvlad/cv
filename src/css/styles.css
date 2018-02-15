@@ -1,0 +1,366 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.debug {
+  position: absolute;
+  z-index: -3;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.debug > div {
+  height: inherit;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.debug > div > div {
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.debug > div > div > div {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(8.33333% - 30px);
+  height: inherit;
+  outline: 1px solid green;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+h2 {
+  font-family: "Century Gothic";
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px dotted;
+  padding-top: 10px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+  position: relative;
+}
+
+.left {
+  background-color: #d9d9d9;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333% - 30px);
+}
+
+.left .personal-photo {
+  max-width: 350px;
+}
+
+.left .contacts ul li a {
+  padding: 10px;
+  color: #fff;
+  transition: transform .2s;
+  border-top: 1px solid #00d9ff;
+  background-image: linear-gradient(to right, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.left .contacts ul li a:hover {
+  transform: scale(1.05);
+}
+
+.left .contacts ul li a svg {
+  font-size: 1.2rem;
+  padding-right: 10px;
+}
+
+.left .contacts ul li:first-child a svg,
+.left .contacts ul li:nth-child(4) a svg {
+  padding-left: 4px;
+}
+
+.right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(66.66667% - 30px);
+  border: 1px solid blue;
+}
+
+.right .general-info .lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.right .general-info .lang img {
+  cursor: pointer;
+}
+
+.right .general-info .lang img:nth-child(2) {
+  padding: 0 5px;
+}
+
+.right .general-info-content h2 {
+  font-weight: bold;
+  color: #00aeef;
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  padding-top: 40px;
+}
+
+.right .general-info-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 930px) {
+  .debug > div {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .debug > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .debug > div > div {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .debug > div > div > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .debug > div > div > div {
+    width: calc(8.33333% - 10px);
+  }
+
+  .wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .content {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .left {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .left {
+    width: calc(66.66667% - 10px);
+  }
+
+  .right {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .right {
+    width: calc(100% - 10px);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .debug > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .debug > div > div {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+  }
+
+  .debug > div > div > div {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .debug > div > div > div {
+    width: calc(8.33333% - 5px);
+  }
+
+  .wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .content {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+  }
+
+  .left {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .right {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .right {
+    width: calc(100% - 5px);
+  }
+}
