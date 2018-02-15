@@ -1,6 +1,7 @@
 @import "smart-grid"
 
 $name_color: #00aeef
+$left_bg: #d9d9d9
 $contact_bg_to_left: linear-gradient(to left, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
 $contact_bg_to_right: linear-gradient(to right, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
 $contact_email_bg: #0099ff
@@ -37,50 +38,19 @@ a:link, a:visited
 //container of site
 .content
 	+row-flex()
-	justify-content: center
 	position: relative
-
-//left sidebar
-.left 
-	background-color: #d9d9d9
-	+col()
-	+size(4)
-	+size-xs(8)
-	+xs-block()
 
 	.personal-photo
 		max-width: 350px
-
-	.contacts
-		ul
-			li 
-				a
-					padding: 10px
-					color: #fff
-					transition: transform .2s
-					border-top: 1px solid #00d9ff
-					background-image: $contact_bg_to_right
-					display: flex
-					flex-wrap: wrap
-					align-items: flex-start
-					&:hover
-						transform: scale(1.05)
-					svg
-						font-size: 1.2rem
-						padding-right: 10px
-
-			li:first-child a svg, li:nth-child(4) a svg
-				padding-left: 4px
-//main content		
-.right
-	+col()
-	+size(8)
-	+size-xs(12)
-	+size-xxs(12)
-	border: 1px solid blue
+		background-color: #fff
+		background-color: $left_bg
+		+col()
+		+size(4)
 
 	.general-info
-		
+		+col()
+		+size(8)
+		+size-sm(12)
 
 		.lang
 			position: absolute
@@ -104,3 +74,54 @@ a:link, a:visited
 			font-size: 1.2rem
 			font-weight: bold
 			padding: 5px 0 
+
+//left sidebar
+.left 
+	background-color: $left_bg
+	+col()
+	+size(4)
+
+	.contacts
+		ul
+			li 
+				a
+					padding: 10px
+					color: #fff
+					transition: transform .2s
+					border-top: 1px solid #00d9ff
+					background-image: $contact_bg_to_right
+					display: flex
+					flex-wrap: wrap
+					align-items: flex-start
+					&:hover
+						transform: scale(1.05)
+					svg
+						font-size: 1.2rem
+						padding-right: 10px
+
+			li:first-child a svg, li:nth-child(4) a svg
+				padding-left: 4px
+
+	.left-personal
+		padding: 15px
+		h2
+			font-weight: bold
+			padding-bottom: 10px
+		table
+			width: 100%
+			font-size: 0.8rem	
+			tr
+				line-height: 1.6
+				td:first-child
+					width: 30%
+				td:nth-child(2)
+					width: 10%
+					text-align: center
+					
+//main content		
+.right
+	+col()
+	+size(8)
+	border: 1px solid blue
+
+	

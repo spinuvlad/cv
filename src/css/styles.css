@@ -180,8 +180,54 @@ a:visited {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  justify-content: center;
   position: relative;
+}
+
+.content .personal-photo {
+  max-width: 350px;
+  background-color: #fff;
+  background-color: #d9d9d9;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333% - 30px);
+}
+
+.content .general-info {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(66.66667% - 30px);
+}
+
+.content .general-info .lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.content .general-info .lang img {
+  cursor: pointer;
+}
+
+.content .general-info .lang img:nth-child(2) {
+  padding: 0 5px;
+}
+
+.content .general-info-content h2 {
+  font-weight: bold;
+  color: #00aeef;
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  padding-top: 40px;
+}
+
+.content .general-info-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 0;
 }
 
 .left {
@@ -191,10 +237,6 @@ a:visited {
   margin-left: 15px;
   margin-right: 15px;
   width: calc(33.33333% - 30px);
-}
-
-.left .personal-photo {
-  max-width: 350px;
 }
 
 .left .contacts ul li a {
@@ -222,6 +264,33 @@ a:visited {
   padding-left: 4px;
 }
 
+.left .left-personal {
+  padding: 15px;
+}
+
+.left .left-personal h2 {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.left .left-personal table {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.left .left-personal table tr {
+  line-height: 1.6;
+}
+
+.left .left-personal table tr td:first-child {
+  width: 30%;
+}
+
+.left .left-personal table tr td:nth-child(2) {
+  width: 10%;
+  text-align: center;
+}
+
 .right {
   box-sizing: border-box;
   word-wrap: break-word;
@@ -229,34 +298,6 @@ a:visited {
   margin-right: 15px;
   width: calc(66.66667% - 30px);
   border: 1px solid blue;
-}
-
-.right .general-info .lang {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.right .general-info .lang img {
-  cursor: pointer;
-}
-
-.right .general-info .lang img:nth-child(2) {
-  padding: 0 5px;
-}
-
-.right .general-info-content h2 {
-  font-weight: bold;
-  color: #00aeef;
-  font-size: 2.2rem;
-  letter-spacing: 3px;
-  padding-top: 40px;
-}
-
-.right .general-info-content h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 5px 0;
 }
 
 @media screen and (max-width: 930px) {
@@ -268,6 +309,12 @@ a:visited {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .content .general-info {
+    width: calc(100% - 30px);
   }
 }
 
@@ -301,22 +348,24 @@ a:visited {
     margin-right: -5px;
   }
 
-  .left {
+  .content .personal-photo {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .content .general-info {
     margin-left: 5px;
     margin-right: 5px;
   }
 
   .left {
-    width: calc(66.66667% - 10px);
-  }
-
-  .right {
     margin-left: 5px;
     margin-right: 5px;
   }
 
   .right {
-    width: calc(100% - 10px);
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -350,6 +399,16 @@ a:visited {
     margin-right: -2.5px;
   }
 
+  .content .personal-photo {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .content .general-info {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
   .left {
     margin-left: 2.5px;
     margin-right: 2.5px;
@@ -358,9 +417,5 @@ a:visited {
   .right {
     margin-left: 2.5px;
     margin-right: 2.5px;
-  }
-
-  .right {
-    width: calc(100% - 5px);
   }
 }
