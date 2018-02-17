@@ -1,17 +1,32 @@
 @import "smart-grid"
 
 $name_color: #00aeef
-$left_bg: #d9d9d9
+$left_bg: #e6e7e8
 $contact_bg_to_left: linear-gradient(to left, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
 $contact_bg_to_right: linear-gradient(to right, #0073bf, #008dd3, #00a6e5, #00c0f3, #00d9ff)
 $contact_email_bg: #0099ff
 
+//skills
+$html: 85%
+$css: 75%
+$css_grid: 65%
+$responsive: 65%
+$js: 20%
+$preprocessing: 70%
+$git_gulp: 50%
+
+//software
+$photoshop: 50%
+$premiere: 60%
+$brackets: 70%
+$sublime: 70%
+
 +reset()
 
-.debug
-	position: absolute
-	z-index: -3
-	+debug(rgba(0, 0, 0, .3), 1px solid green)
+// .debug
+// 	position: absolute
+// 	z-index: -3
+// 	+debug(rgba(0, 0, 0, .3), 1px solid green)
 
 body
 	font-family: "Open Sans"
@@ -20,6 +35,8 @@ body
 h2
 	font-family: "Century Gothic"
 	text-transform: uppercase
+	font-weight: bold
+	padding-bottom: 5px
 
 h3
 	font-family: "Open Sans"
@@ -30,6 +47,11 @@ a:link, a:visited
 	color: inherit
 	display: block
 
+table
+	width: 100%
+	font-size: 0.8rem
+	tr
+		line-height: 1.6	
 .wrapper
 	+wrapper()
 	border: 1px dotted 
@@ -103,25 +125,75 @@ a:link, a:visited
 				padding-left: 4px
 
 	.left-personal
-		padding: 15px
-		h2
-			font-weight: bold
-			padding-bottom: 10px
+		padding: 20px 15px
 		table
-			width: 100%
-			font-size: 0.8rem	
 			tr
-				line-height: 1.6
 				td:first-child
 					width: 30%
 				td:nth-child(2)
 					width: 10%
 					text-align: center
+
+	.left-skills, .left-soft,
+		padding: 0 15px 20px 15px
+		table tr td:last-child
+			width: 60%
+			span
+				display: block
+				height: 5px
+				background-color: #b7b8b9
+				i
+					background-color: $name_color
+					display: block
+					height: 5px
+
+	.left-skills table
+		tr:nth-child(1) span i
+			width: $html
+		tr:nth-child(2) span i
+			width: $css
+		tr:nth-child(3) span i
+			width: $css_grid
+		tr:nth-child(4) span i
+			width: $responsive
+		tr:nth-child(5) span i
+			width: $js
+		tr:nth-child(6) span i
+			width: $preprocessing
+		tr:nth-child(7) span i
+			width: $git_gulp
+
+	.left-soft table
+		tr:nth-child(1) span i
+			width: $photoshop
+		tr:nth-child(2) span i
+			width: $premiere
+		tr:nth-child(3) span i
+			width: $brackets
+		tr:nth-child(4) span i
+			width: $sublime
 					
+	.left-reference
+		padding: 0 15px 20px 15px
+		.left-reference-contacts
+			font-size: 0.8rem
+
 //main content		
 .right
 	+col()
 	+size(8)
 	border: 1px solid blue
+	.bar
+		background-color: $left_bg 
+		padding: 7px 0
+		margin-left: -31px
+		h3
+			font-weight: bold
+			font-size: 1.2em
+			padding-left: 31px
+
+	.right-experience
+
+			
 
 	
