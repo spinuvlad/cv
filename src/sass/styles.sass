@@ -23,10 +23,10 @@ $sublime: 70%
 
 +reset()
 
-// .debug
-// 	position: absolute
-// 	z-index: -3
-// 	+debug(rgba(0, 0, 0, .3), 1px solid green)
+.debug
+	position: absolute
+	z-index: -3
+	+debug(rgba(0, 0, 0, .3), 1px solid green)
 
 body
 	font-family: "Open Sans"
@@ -95,17 +95,17 @@ table
 		h3
 			font-size: 1.2rem
 			font-weight: bold
-			padding: 5px 0 
+			padding: 5px 0
 
 //left sidebar
-.left 
+.left
 	background-color: $left_bg
 	+col()
 	+size(4)
 
 	.contacts
 		ul
-			li 
+			li
 				a
 					padding: 10px
 					color: #fff
@@ -178,22 +178,33 @@ table
 		.left-reference-contacts
 			font-size: 0.8rem
 
-//main content		
+//main content
 .right
 	+col()
 	+size(8)
 	border: 1px solid blue
 	.bar
-		background-color: $left_bg 
+		background-color: $left_bg
 		padding: 7px 0
-		margin-left: -31px
+		margin-left: -30px
 		h3
 			font-weight: bold
 			font-size: 1.2em
-			padding-left: 31px
+			padding-left: 30px
 
-	.right-experience
-
-			
-
-	
+	&-block
+		+row-flex()
+		margin-top: 10px
+		.right-compartiment
+			font-family: "Century Gothic"
+			font-size: .7rem
+			font-weight: bold
+			+col()
+			+size(4)
+		.right-block-content
+			+col()
+			+size(8)
+			ul.right-group-menu
+				li
+					a
+						margin-bottom: 10px

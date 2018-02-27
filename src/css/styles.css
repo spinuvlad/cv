@@ -108,6 +108,41 @@ img {
   height: auto;
 }
 
+.debug {
+  position: absolute;
+  z-index: -3;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.debug > div {
+  height: inherit;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.debug > div > div {
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.debug > div > div > div {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(8.33333% - 30px);
+  height: inherit;
+  outline: 1px solid green;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 body {
   font-family: "Open Sans";
   font-size: 0.9rem;
@@ -341,16 +376,52 @@ table tr {
 .right .bar {
   background-color: #e6e7e8;
   padding: 7px 0;
-  margin-left: -31px;
+  margin-left: -30px;
 }
 
 .right .bar h3 {
   font-weight: bold;
   font-size: 1.2em;
-  padding-left: 31px;
+  padding-left: 30px;
+}
+
+.right-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 10px;
+}
+
+.right-block .right-compartiment {
+  font-family: "Century Gothic";
+  font-size: .7rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333% - 30px);
+}
+
+.right-block .right-block-content {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(66.66667% - 30px);
+}
+
+.right-block .right-block-content ul.right-group-menu li a {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 930px) {
+  .debug > div {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
@@ -364,6 +435,25 @@ table tr {
 }
 
 @media screen and (max-width: 576px) {
+  .debug > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .debug > div > div {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .debug > div > div > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .debug > div > div > div {
+    width: calc(8.33333% - 10px);
+  }
+
   .wrapper {
     padding-left: 5px;
     padding-right: 5px;
@@ -393,9 +483,43 @@ table tr {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  .right-block {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .right-block .right-compartiment {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .right-block .right-block-content {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 @media screen and (max-width: 420px) {
+  .debug > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .debug > div > div {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+  }
+
+  .debug > div > div > div {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .debug > div > div > div {
+    width: calc(8.33333% - 5px);
+  }
+
   .wrapper {
     padding-left: 5px;
     padding-right: 5px;
@@ -422,6 +546,21 @@ table tr {
   }
 
   .right {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .right-block {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+  }
+
+  .right-block .right-compartiment {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .right-block .right-block-content {
     margin-left: 2.5px;
     margin-right: 2.5px;
   }
