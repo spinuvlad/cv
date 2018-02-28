@@ -14,6 +14,7 @@ $responsive: 65%
 $js: 20%
 $preprocessing: 70%
 $git_gulp: 50%
+$php: 0%
 
 //software
 $photoshop: 50%
@@ -23,10 +24,10 @@ $sublime: 70%
 
 +reset()
 
-.debug
-	position: absolute
-	z-index: -3
-	+debug(rgba(0, 0, 0, .3), 1px solid green)
+// .debug
+// 	position: absolute
+// 	z-index: -3
+// 	+debug(rgba(0, 0, 0, .3), 1px solid green)
 
 body
 	font-family: "Open Sans"
@@ -162,6 +163,8 @@ table
 			width: $preprocessing
 		tr:nth-child(7) span i
 			width: $git_gulp
+		tr:nth-child(8) span i
+			width: $php
 
 	.left-soft table
 		tr:nth-child(1) span i
@@ -186,19 +189,22 @@ table
 	.bar
 		background-color: $left_bg
 		padding: 7px 0
-		margin-left: -30px
+		margin-left: -31px
+		position: relative
+		z-index: -2
 		h3
 			font-weight: bold
 			font-size: 1.2em
-			padding-left: 30px
+			padding-left: 31px
 
 	&-block
 		+row-flex()
 		margin-top: 10px
 		.right-compartiment
 			font-family: "Century Gothic"
-			font-size: .7rem
+			font-size: .8rem
 			font-weight: bold
+			text-align: left
 			+col()
 			+size(4)
 		.right-block-content
@@ -208,3 +214,5 @@ table
 				li
 					a
 						margin-bottom: 10px
+						&:hover
+							text-decoration: underline
