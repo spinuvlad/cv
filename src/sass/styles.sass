@@ -32,6 +32,7 @@ $sublime: 70%
 body
 	font-family: "Open Sans"
 	font-size: 0.9rem
+	+xs(font-size, 0.8rem)
 	text-align: justify
 h2
 	font-family: "Century Gothic"
@@ -51,6 +52,8 @@ a:link, a:visited
 table
 	width: 100%
 	font-size: 0.8rem
+	+sm(font-size, 0.7rem)
+	+xs(font-size, 0.8rem)
 	tr
 		line-height: 1.6	
 .wrapper
@@ -69,6 +72,7 @@ table
 		+col()
 		+size(4)
 		+size-sm(6)
+		+size-xs(9)
 		display: flex
 		align-items: flex-end
 
@@ -76,6 +80,7 @@ table
 		+col()
 		+size(8)
 		+size-sm(12)
+		+xs(margin-bottom, 10px)
 
 		.lang
 			position: absolute
@@ -93,10 +98,12 @@ table
 			font-weight: bold
 			color: $name_color
 			font-size: 2.2rem
+			+xs(font-size, 1.8rem)
 			letter-spacing: 3px
 			padding-top: 30px
 		h3
 			font-size: 1.2rem
+			+xs(font-size, 1rem)
 			font-weight: bold
 			padding: 5px 0
 
@@ -115,6 +122,7 @@ table
 					font-size: .8rem
 				+from-to(576px, 591px)
 					font-size: .8rem
+				+xs(font-size, 1rem)
 				a
 					padding: 10px
 					color: #fff
@@ -225,6 +233,7 @@ table
 		.right-block-content
 			+col()
 			+size(8)
+			+xs(font-size, 1rem)
 			ul.right-group-menu
 				li
 					a

@@ -439,6 +439,10 @@ table tr {
 }
 
 @media screen and (max-width: 720px) {
+  table {
+    font-size: 0.7rem;
+  }
+
   .content .personal-photo {
     width: calc(50% - 30px);
   }
@@ -457,6 +461,14 @@ table tr {
 }
 
 @media screen and (max-width: 576px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
   .wrapper {
     padding-left: 5px;
     padding-right: 5px;
@@ -472,9 +484,25 @@ table tr {
     margin-right: 5px;
   }
 
+  .content .personal-photo {
+    width: calc(75% - 10px);
+  }
+
   .content .general-info {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .content .general-info {
+    margin-bottom: 10px;
+  }
+
+  .content .general-info-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .content .general-info-content h3 {
+    font-size: 1rem;
   }
 
   .left {
@@ -484,6 +512,10 @@ table tr {
 
   .left {
     width: calc(100% - 10px);
+  }
+
+  .left .contacts ul li {
+    font-size: 1rem;
   }
 
   .left .left-reference {
@@ -524,6 +556,10 @@ table tr {
   .right-block .right-block-content {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .right-block .right-block-content {
+    font-size: 1rem;
   }
 
   .right-hobby .right-hobby-elems {
