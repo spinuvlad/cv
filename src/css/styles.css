@@ -147,7 +147,6 @@ table tr {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px dotted;
   padding-top: 10px;
 }
 
@@ -162,12 +161,13 @@ table tr {
 .content .personal-photo {
   max-width: 350px;
   background-color: #fff;
-  background-color: #e6e7e8;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
   width: calc(33.33333% - 30px);
+  display: flex;
+  align-items: flex-end;
 }
 
 .content .general-info {
@@ -197,7 +197,7 @@ table tr {
   color: #00aeef;
   font-size: 2.2rem;
   letter-spacing: 3px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .content .general-info-content h3 {
@@ -339,7 +339,6 @@ table tr {
   margin-left: 15px;
   margin-right: 15px;
   width: calc(66.66667% - 30px);
-  border: 1px solid blue;
 }
 
 .right .bar {
@@ -362,6 +361,7 @@ table tr {
   margin-left: -15px;
   margin-right: -15px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .right-block .right-compartiment {
@@ -392,6 +392,45 @@ table tr {
   text-decoration: underline;
 }
 
+.right-studies a {
+  display: inline-block;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.right-studies a:hover {
+  text-decoration: none;
+}
+
+.right-hobby .right-hobby-elems {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  align-items: baseline;
+  margin: 20px 0;
+}
+
+.right-hobby .right-hobby-elems div {
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+}
+
+.right-hobby .right-hobby-elems div img {
+  width: 40%;
+}
+
+.right-hobby .right-hobby-elems div span {
+  font-family: "Century Gothic";
+  font-size: .8rem;
+  font-weight: bold;
+  display: block;
+}
+
 @media screen and (max-width: 930px) {
   .wrapper {
     padding-left: 15px;
@@ -400,8 +439,20 @@ table tr {
 }
 
 @media screen and (max-width: 720px) {
+  .content .personal-photo {
+    width: calc(50% - 30px);
+  }
+
   .content .general-info {
     width: calc(100% - 30px);
+  }
+
+  .left {
+    width: calc(41.66667% - 30px);
+  }
+
+  .right {
+    width: calc(58.33333% - 30px);
   }
 }
 
@@ -431,9 +482,33 @@ table tr {
     margin-right: 5px;
   }
 
+  .left {
+    width: calc(100% - 10px);
+  }
+
+  .left .left-reference {
+    display: none;
+  }
+
   .right {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .right {
+    width: calc(100% - 10px);
+  }
+
+  .right {
+    margin-top: 5px;
+  }
+
+  .right .bar {
+    margin-left: 0px;
+  }
+
+  .right .bar h3 {
+    padding-left: 0px;
   }
 
   .right-block {
@@ -449,6 +524,28 @@ table tr {
   .right-block .right-block-content {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .right-hobby .right-hobby-elems {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .right-hobby .right-hobby-elems div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .right-hobby .right-hobby-elems div {
+    width: calc(50% - 10px);
+  }
+
+  .right-hobby .right-hobby-elems div:last-child {
+    margin-top: 10px;
+  }
+
+  .right-hobby .right-hobby-elems div img {
+    width: 20%;
   }
 }
 
@@ -496,5 +593,37 @@ table tr {
   .right-block .right-block-content {
     margin-left: 2.5px;
     margin-right: 2.5px;
+  }
+
+  .right-hobby .right-hobby-elems {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+  }
+
+  .right-hobby .right-hobby-elems div {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+}
+
+@media screen and (min-width: 712px) and (max-width: 732px) {
+  .left .contacts ul li {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 591px) {
+  .left .contacts ul li {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 723px) {
+  .right-hobby .right-hobby-elems div img {
+    width: 50%;
+  }
+
+  .right-hobby .right-hobby-elems div span {
+    font-size: .7rem;
   }
 }

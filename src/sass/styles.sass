@@ -55,7 +55,7 @@ table
 		line-height: 1.6	
 .wrapper
 	+wrapper()
-	border: 1px dotted 
+	//border: 1px dotted 
 	padding-top: 10px
 
 //container of site
@@ -66,9 +66,11 @@ table
 	.personal-photo
 		max-width: 350px
 		background-color: #fff
-		background-color: $left_bg
 		+col()
 		+size(4)
+		+size-sm(6)
+		display: flex
+		align-items: flex-end
 
 	.general-info
 		+col()
@@ -92,7 +94,7 @@ table
 			color: $name_color
 			font-size: 2.2rem
 			letter-spacing: 3px
-			padding-top: 40px
+			padding-top: 30px
 		h3
 			font-size: 1.2rem
 			font-weight: bold
@@ -103,10 +105,16 @@ table
 	background-color: $left_bg
 	+col()
 	+size(4)
+	+size-sm(5)
+	+size-xs(12)
 
 	.contacts
 		ul
 			li
+				+from-to(712px, 732px)
+					font-size: .8rem
+				+from-to(576px, 591px)
+					font-size: .8rem
 				a
 					padding: 10px
 					color: #fff
@@ -177,6 +185,7 @@ table
 			width: $sublime
 					
 	.left-reference
+		+xs(display, none)
 		padding: 0 15px 20px 15px
 		.left-reference-contacts
 			font-size: 0.8rem
@@ -185,21 +194,27 @@ table
 .right
 	+col()
 	+size(8)
-	border: 1px solid blue
+	+size-sm(7)
+	+size-xs(12)
+	+xs-block()
+		margin-top: 5px
 	.bar
 		background-color: $left_bg
 		padding: 7px 0
 		margin-left: -31px
 		position: relative
 		z-index: -2
+		+xs(margin-left, 0px)
 		h3
 			font-weight: bold
 			font-size: 1.2em
 			padding-left: 31px
+			+xs(padding-left, 0px)
 
 	&-block
 		+row-flex()
 		margin-top: 10px
+		margin-bottom: 10px
 		.right-compartiment
 			font-family: "Century Gothic"
 			font-size: .8rem
@@ -216,3 +231,35 @@ table
 						margin-bottom: 10px
 						&:hover
 							text-decoration: underline
+	&-studies
+		a
+			display: inline-block
+			text-decoration: underline
+			font-style: italic
+			&:hover
+				text-decoration: none
+	&-hobby
+		.right-hobby-elems
+			+row-flex()
+			align-items: baseline
+			margin: 20px 0
+			div
+				text-align: center
+				+col()
+				+size(3)
+				+size-xs(6)
+				&:last-child
+					+xs(margin-top, 10px)
+				img
+					width: 40%
+					+xs(width, 20%)
+					+from-to(576px, 723px)
+						width: 50%
+				span
+					font-family: "Century Gothic"
+					font-size: .8rem
+					font-weight: bold
+					display: block
+					+from-to(576px, 723px)
+						font-size: .7rem
+
